@@ -1,0 +1,37 @@
+name:                RPBasic
+version:             0.1.0.0
+synopsis:            Basic like language compiler for RPeanut
+description:         Please see README.md
+homepage:            https://github.com/andrew-m-h/RPBasic#readme
+license:             GPL-3
+license-file:        LICENSE
+author:              Andrew M. Hall
+maintainer:          andrew.m.h96@gmail.com
+copyright:           2016 Andrew M. Hall
+category:            Compiler
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable RPBasic
+  build-tools:         alex, happy
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -Wall
+  build-depends:       base >= 4.5 && <= 4.7
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/andrew-m-h/RPBasic
+
+--test-suite RPBasic-test
+--  type:                exitcode-stdio-1.0
+--  hs-source-dirs:      test
+--  main-is:             Spec.hs
+--  build-depends:       base
+--                     , RPBasic
+--  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+--  default-language:    Haskell2010
+
+
