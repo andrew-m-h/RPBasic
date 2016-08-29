@@ -1,0 +1,2683 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-28 15:07:36.484264 UTC
+
+interface main@main:Lexer 7103
+  interface hash: dd4d6e2a1aaf0790dc1c5a5b360cd786
+  ABI hash: 2ad31a8e19685bf71328ad6055f7dcbc
+  export-list hash: 20bda8e186b4e55379d02d5eebb3e6ab
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1ca0f102959b19e94f7a8c5f80a0e39a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lexer.alexGetByte
+  Lexer.alexIndexInt16OffAddr
+  Lexer.alexIndexInt32OffAddr
+  Lexer.alexInputPrevChar
+  Lexer.alexScan
+  Lexer.alexScanTokens
+  Lexer.alexScanUser
+  Lexer.alex_accept
+  Lexer.alex_action_10
+  Lexer.alex_action_11
+  Lexer.alex_action_12
+  Lexer.alex_action_13
+  Lexer.alex_action_14
+  Lexer.alex_action_15
+  Lexer.alex_action_16
+  Lexer.alex_action_17
+  Lexer.alex_action_18
+  Lexer.alex_action_19
+  Lexer.alex_action_2
+  Lexer.alex_action_20
+  Lexer.alex_action_21
+  Lexer.alex_action_22
+  Lexer.alex_action_23
+  Lexer.alex_action_24
+  Lexer.alex_action_25
+  Lexer.alex_action_26
+  Lexer.alex_action_27
+  Lexer.alex_action_28
+  Lexer.alex_action_29
+  Lexer.alex_action_3
+  Lexer.alex_action_30
+  Lexer.alex_action_31
+  Lexer.alex_action_32
+  Lexer.alex_action_33
+  Lexer.alex_action_34
+  Lexer.alex_action_35
+  Lexer.alex_action_36
+  Lexer.alex_action_37
+  Lexer.alex_action_38
+  Lexer.alex_action_39
+  Lexer.alex_action_4
+  Lexer.alex_action_40
+  Lexer.alex_action_41
+  Lexer.alex_action_42
+  Lexer.alex_action_43
+  Lexer.alex_action_44
+  Lexer.alex_action_45
+  Lexer.alex_action_46
+  Lexer.alex_action_47
+  Lexer.alex_action_48
+  Lexer.alex_action_49
+  Lexer.alex_action_5
+  Lexer.alex_action_50
+  Lexer.alex_action_51
+  Lexer.alex_action_52
+  Lexer.alex_action_53
+  Lexer.alex_action_54
+  Lexer.alex_action_55
+  Lexer.alex_action_6
+  Lexer.alex_action_7
+  Lexer.alex_action_8
+  Lexer.alex_action_9
+  Lexer.alex_base
+  Lexer.alex_check
+  Lexer.alex_deflt
+  Lexer.alex_scan_tkn
+  Lexer.alex_tab_size
+  Lexer.alex_table
+  Lexer.quickIndex
+  Lexer.runLexer
+  Lexer.utf8Encode
+  Lexer.AlexAcc{Lexer.AlexAcc Lexer.AlexAccNone Lexer.AlexAccSkip}
+  Lexer.AlexAddr{Lexer.AlexA#}
+  Lexer.AlexInput
+  Lexer.AlexLastAcc{Lexer.AlexLastAcc Lexer.AlexLastSkip Lexer.AlexNone}
+  Lexer.AlexReturn{Lexer.AlexEOF Lexer.AlexError Lexer.AlexSkip Lexer.AlexToken}
+  Lexer.Byte
+  Lexer.Token{Lexer.T_Add Lexer.T_AddrOf Lexer.T_And Lexer.T_As Lexer.T_Asm Lexer.T_Assign Lexer.T_Band Lexer.T_Bnot Lexer.T_Bor Lexer.T_Bxor Lexer.T_ByRef Lexer.T_Case Lexer.T_Char Lexer.T_Colon Lexer.T_Comma Lexer.T_Declare Lexer.T_Dim Lexer.T_Div Lexer.T_EQ Lexer.T_Else Lexer.T_For Lexer.T_Function Lexer.T_GE Lexer.T_GT Lexer.T_Goto Lexer.T_Identifier Lexer.T_If Lexer.T_Int Lexer.T_IntLit Lexer.T_LBrace Lexer.T_LE Lexer.T_LParen Lexer.T_LSqBrace Lexer.T_LT Lexer.T_Label Lexer.T_NE Lexer.T_Or Lexer.T_Ptr Lexer.T_RBrace Lexer.T_RParen Lexer.T_RSqBrace Lexer.T_Return Lexer.T_Select Lexer.T_SemiColon Lexer.T_Shl Lexer.T_Shr Lexer.T_Star Lexer.T_StringLit Lexer.T_Struct Lexer.T_Sub Lexer.T_Subtract Lexer.T_Type Lexer.T_Typename Lexer.T_While}
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array 6e22602c1cc5e362609f0924a7c0a209
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array.Base a0576aaf9a801948417a257cfc0c6084
+import  -/  base-4.8.2.0:Data.Bits 87551525e7ef366d0fc4cad44e8b1bfc
+import  -/  base-4.8.2.0:Data.Char c8f827952d4111ae2e47c0b105217cdb
+import  -/  base-4.8.2.0:Data.Word ec8deb535202352cc8b509b14004bcbd
+import  -/  base-4.8.2.0:GHC.Arr 70f35e6bfbc61995e045edb612354887
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Enum debc6de3086023a15993ab0cecffb90b
+import  -/  base-4.8.2.0:GHC.Exts 7bdf420b67c4b8c9ccc9ea593e90bb92
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:GHC.Word 10dc88543d98000abab9695a1019767d
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
+import  -/  base-4.8.2.0:Text.Read ef0ef92fb7358ae94bab089940adfd2a
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+addDependentFile "/home/andrew/.stack/programs/x86_64-linux/ghc-7.10.3/lib/ghc-7.10.3/include/ghcversion.h"
+addDependentFile "/usr/include/stdc-predef.h"
+addDependentFile "src/Lexer.x"
+addDependentFile "/home/andrew/.stack/programs/x86_64-linux/ghc-7.10.3/lib/ghc-7.10.3/include/ghcconfig.h"
+addDependentFile "/home/andrew/.stack/programs/x86_64-linux/ghc-7.10.3/lib/ghc-7.10.3/include/ghcplatform.h"
+addDependentFile "/home/andrew/.stack/programs/x86_64-linux/ghc-7.10.3/lib/ghc-7.10.3/include/ghcautoconf.h"
+addDependentFile ".stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/autogen/cabal_macros.h"
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fEqToken :: GHC.Classes.Eq Lexer.Token
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lexer.Token Lexer.$fEqToken_$c== Lexer.$fEqToken_$c/= -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fEqToken_$c/= :: Lexer.Token -> Lexer.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Lexer.Token b :: Lexer.Token ->
+                 case Lexer.$fEqToken_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fEqToken_$c== :: Lexer.Token -> Lexer.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Lexer.Token ds1 :: Lexer.Token ->
+                 case ds of wild {
+                   DEFAULT
+                   -> case ds1 of x1 { DEFAULT ->
+                      GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==#
+                           (GHC.Prim.dataToTag# @ Lexer.Token wild)
+                           (GHC.Prim.dataToTag# @ Lexer.Token x1)) }
+                   Lexer.T_IntLit a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ Lexer.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 0 -> GHC.Types.True }
+                        Lexer.T_IntLit b1 -> GHC.Classes.eqInt a1 b1 }
+                   Lexer.T_StringLit a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ Lexer.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 1 -> GHC.Types.True }
+                        Lexer.T_StringLit b1 -> GHC.Base.eqString a1 b1 }
+                   Lexer.T_Label a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ Lexer.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 51 -> GHC.Types.True }
+                        Lexer.T_Label b1 -> GHC.Base.eqString a1 b1 }
+                   Lexer.T_Identifier a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ Lexer.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 52 -> GHC.Types.True }
+                        Lexer.T_Identifier b1 -> GHC.Base.eqString a1 b1 }
+                   Lexer.T_Typename a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ Lexer.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 53 -> GHC.Types.True }
+                        Lexer.T_Typename b1 -> GHC.Base.eqString a1 b1 } }) -}
+a45db0f7d66fb61e344f32e4c69a34c6
+  $fFunctorAlexLastAcc :: GHC.Base.Functor Lexer.AlexLastAcc
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lexer.AlexLastAcc
+                  Lexer.$fFunctorAlexLastAcc_$cfmap
+                  Lexer.$fFunctorAlexLastAcc_$c<$ -}
+a45db0f7d66fb61e344f32e4c69a34c6
+  $fFunctorAlexLastAcc_$c<$ ::
+    a -> Lexer.AlexLastAcc b -> Lexer.AlexLastAcc a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b eta :: a ds :: Lexer.AlexLastAcc b ->
+                 case ds of wild {
+                   Lexer.AlexNone -> Lexer.AlexNone @ a
+                   Lexer.AlexLastAcc x y dt -> Lexer.AlexLastAcc @ a eta y dt
+                   Lexer.AlexLastSkip x dt -> Lexer.AlexLastSkip @ a x dt }) -}
+a45db0f7d66fb61e344f32e4c69a34c6
+  $fFunctorAlexLastAcc_$cfmap ::
+    (a -> b) -> Lexer.AlexLastAcc a -> Lexer.AlexLastAcc b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b ds :: a -> b ds1 :: Lexer.AlexLastAcc a ->
+                 case ds1 of wild {
+                   Lexer.AlexNone -> Lexer.AlexNone @ b
+                   Lexer.AlexLastAcc x y dt -> Lexer.AlexLastAcc @ b (ds x) y dt
+                   Lexer.AlexLastSkip x dt -> Lexer.AlexLastSkip @ b x dt }) -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fShowToken :: GHC.Show.Show Lexer.Token
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Lexer.Token
+                  Lexer.$fShowToken_$cshowsPrec
+                  Lexer.$fShowToken_$cshow
+                  Lexer.$fShowToken_$cshowList -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fShowToken1 :: Lexer.Token -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Lexer.$fShowToken_$cshowsPrec Lexer.$fShowToken2) -}
+fa5024408ad8f003dc8be19275892ea5
+  $fShowToken2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fShowToken_$cshow :: Lexer.Token -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Lexer.Token ->
+                 Lexer.$fShowToken_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fShowToken_$cshowList :: [Lexer.Token] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Lexer.Token
+                   Lexer.$fShowToken1) -}
+ad7a6c6996b87f9168eedb0d518f01dc
+  $fShowToken_$cshowsPrec ::
+    GHC.Types.Int -> Lexer.Token -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+ed934e7595f042b123ad7eb19688a778
+  $walexGetByte ::
+    GHC.Types.Char
+    -> [Lexer.Byte]
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (Lexer.Byte, Lexer.AlexInput)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Types.Char
+                   ww1 :: [Lexer.Byte]
+                   ww2 :: GHC.Base.String ->
+                 case ww1 of wild {
+                   []
+                   -> case ww2 of wild1 {
+                        [] -> GHC.Base.Nothing @ (Lexer.Byte, Lexer.AlexInput)
+                        : c s
+                        -> case c of wild2 { GHC.Types.C# c# ->
+                           let {
+                             ww3 :: GHC.Prim.Int# = GHC.Prim.ord# c#
+                           } in
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# ww3 127) of wild3 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<=# ww3 2047) of wild4 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=# ww3 65535) of wild5 {
+                                       GHC.Types.False
+                                       -> case GHC.Base.map
+                                                 @ GHC.Types.Int
+                                                 @ GHC.Word.Word8
+                                                 Lexer.alexGetByte1
+                                                 (GHC.Types.:
+                                                    @ GHC.Types.Int
+                                                    (GHC.Types.I#
+                                                       (GHC.Prim.+#
+                                                          240
+                                                          (GHC.Prim.uncheckedIShiftRA# ww3 18)))
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Int
+                                                       (GHC.Types.I#
+                                                          (GHC.Prim.+#
+                                                             128
+                                                             (GHC.Prim.andI#
+                                                                (GHC.Prim.uncheckedIShiftRA# ww3 12)
+                                                                63)))
+                                                       (GHC.Types.:
+                                                          @ GHC.Types.Int
+                                                          (GHC.Types.I#
+                                                             (GHC.Prim.+#
+                                                                128
+                                                                (GHC.Prim.andI#
+                                                                   (GHC.Prim.uncheckedIShiftRA#
+                                                                      ww3
+                                                                      6)
+                                                                   63)))
+                                                          (GHC.Types.:
+                                                             @ GHC.Types.Int
+                                                             (GHC.Types.I#
+                                                                (GHC.Prim.+#
+                                                                   128
+                                                                   (GHC.Prim.andI# ww3 63)))
+                                                             (GHC.Types.[]
+                                                                @ GHC.Types.Int))))) of wild6 {
+                                            [] -> GHC.Base.Nothing @ (Lexer.Byte, Lexer.AlexInput)
+                                            : b bs
+                                            -> GHC.Base.Just
+                                                 @ (Lexer.Byte, Lexer.AlexInput)
+                                                 (b, (wild2, bs, s)) }
+                                       GHC.Types.True
+                                       -> case GHC.Base.map
+                                                 @ GHC.Types.Int
+                                                 @ GHC.Word.Word8
+                                                 Lexer.alexGetByte1
+                                                 (GHC.Types.:
+                                                    @ GHC.Types.Int
+                                                    (GHC.Types.I#
+                                                       (GHC.Prim.+#
+                                                          224
+                                                          (GHC.Prim.uncheckedIShiftRA# ww3 12)))
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Int
+                                                       (GHC.Types.I#
+                                                          (GHC.Prim.+#
+                                                             128
+                                                             (GHC.Prim.andI#
+                                                                (GHC.Prim.uncheckedIShiftRA# ww3 6)
+                                                                63)))
+                                                       (GHC.Types.:
+                                                          @ GHC.Types.Int
+                                                          (GHC.Types.I#
+                                                             (GHC.Prim.+#
+                                                                128
+                                                                (GHC.Prim.andI# ww3 63)))
+                                                          (GHC.Types.[]
+                                                             @ GHC.Types.Int)))) of wild6 {
+                                            [] -> GHC.Base.Nothing @ (Lexer.Byte, Lexer.AlexInput)
+                                            : b bs
+                                            -> GHC.Base.Just
+                                                 @ (Lexer.Byte, Lexer.AlexInput)
+                                                 (b, (wild2, bs, s)) } }
+                                  GHC.Types.True
+                                  -> case GHC.Base.map
+                                            @ GHC.Types.Int
+                                            @ GHC.Word.Word8
+                                            Lexer.alexGetByte1
+                                            (GHC.Types.:
+                                               @ GHC.Types.Int
+                                               (GHC.Types.I#
+                                                  (GHC.Prim.+#
+                                                     192
+                                                     (GHC.Prim.uncheckedIShiftRA# ww3 6)))
+                                               (GHC.Types.:
+                                                  @ GHC.Types.Int
+                                                  (GHC.Types.I#
+                                                     (GHC.Prim.+# 128 (GHC.Prim.andI# ww3 63)))
+                                                  (GHC.Types.[] @ GHC.Types.Int))) of wild5 {
+                                       [] -> GHC.Base.Nothing @ (Lexer.Byte, Lexer.AlexInput)
+                                       : b bs
+                                       -> GHC.Base.Just
+                                            @ (Lexer.Byte, Lexer.AlexInput)
+                                            (b, (wild2, bs, s)) } }
+                             GHC.Types.True
+                             -> case GHC.Base.map
+                                       @ GHC.Types.Int
+                                       @ GHC.Word.Word8
+                                       Lexer.alexGetByte1
+                                       (GHC.Types.:
+                                          @ GHC.Types.Int
+                                          (GHC.Types.I# ww3)
+                                          (GHC.Types.[] @ GHC.Types.Int)) of wild4 {
+                                  [] -> GHC.Base.Nothing @ (Lexer.Byte, Lexer.AlexInput)
+                                  : b bs
+                                  -> GHC.Base.Just
+                                       @ (Lexer.Byte, Lexer.AlexInput)
+                                       (b, (wild2, bs, s)) } } } }
+                   : b bs
+                   -> GHC.Base.Just
+                        @ (Lexer.Byte, Lexer.AlexInput)
+                        (b, (ww, bs, ww2)) }) -}
+b3dd6d0c3dddc919a054295d7ea9a927
+  $walexScanUser ::
+    GHC.Types.Char
+    -> [Lexer.Byte]
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> Lexer.AlexReturn ([GHC.Types.Char] -> Lexer.Token)
+  {- Arity: 4, Strictness: <L,U><S,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ @ t
+                   ww :: GHC.Types.Char
+                   ww1 :: [Lexer.Byte]
+                   ww2 :: GHC.Base.String
+                   ww3 :: GHC.Prim.Int# ->
+                 case Lexer.$walex_scan_tkn
+                        @ t
+                        @ Lexer.AlexInput
+                        0
+                        ww
+                        ww1
+                        ww2
+                        ww3
+                        (Lexer.AlexNone
+                           @ ([GHC.Types.Char] -> Lexer.Token)) of ww4 { (#,#) ww5 ww6 ->
+                 case ww5 of wild {
+                   Lexer.AlexNone
+                   -> case Lexer.$walexGetByte ww ww1 ww2 of wild1 {
+                        GHC.Base.Nothing
+                        -> Lexer.AlexEOF @ ([GHC.Types.Char] -> Lexer.Token)
+                        GHC.Base.Just ds
+                        -> Lexer.$WAlexError @ ([GHC.Types.Char] -> Lexer.Token) ww6 }
+                   Lexer.AlexLastAcc k input''' dt
+                   -> Lexer.AlexToken
+                        @ ([GHC.Types.Char] -> Lexer.Token)
+                        input'''
+                        dt
+                        k
+                   Lexer.AlexLastSkip input'' dt
+                   -> Lexer.AlexSkip
+                        @ ([GHC.Types.Char] -> Lexer.Token)
+                        input''
+                        dt } }) -}
+155c5bf45070c8ded3eac5ed1cffb4da
+  $walex_scan_tkn ::
+    GHC.Prim.Int#
+    -> GHC.Types.Char
+    -> [Lexer.Byte]
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> Lexer.AlexLastAcc ([GHC.Types.Char] -> Lexer.Token)
+    -> (# Lexer.AlexLastAcc ([GHC.Types.Char] -> Lexer.Token),
+          Lexer.AlexInput #)
+  {- Arity: 6, Strictness: <L,U><L,U><S,U><L,U><L,U><L,1*U>,
+     Inline: [0] -}
+9fe38acd63d891e726b62f588fef9de1
+  $wgo ::
+    GHC.Types.Char -> [Lexer.Byte] -> GHC.Base.String -> [Lexer.Token]
+  {- Arity: 3, Strictness: <L,U><S,U><L,U>, Inline: [0] -}
+b3e6ff46174f902b6712abf8f57d47de
+  type role AlexAcc representational phantom
+  data AlexAcc a user = AlexAccNone | AlexAcc a | AlexAccSkip
+    Promotable
+7d9e8b1ce3eb0813b8af3b7fee181a1d
+  data AlexAddr = AlexA# GHC.Prim.Addr#
+3485a719bbe6b9ad91cf199554fb6de8
+  type AlexInput = (GHC.Types.Char, [Lexer.Byte], GHC.Base.String)
+a45db0f7d66fb61e344f32e4c69a34c6
+  data AlexLastAcc a
+    = AlexNone
+    | AlexLastAcc a !Lexer.AlexInput {-# UNPACK #-}GHC.Types.Int
+    | AlexLastSkip !Lexer.AlexInput {-# UNPACK #-}GHC.Types.Int
+8bf042cd77bb16d35bed69ac07fc3a07
+  data AlexReturn a
+    = AlexEOF
+    | AlexError !Lexer.AlexInput
+    | AlexSkip !Lexer.AlexInput {-# UNPACK #-}GHC.Types.Int
+    | AlexToken !Lexer.AlexInput {-# UNPACK #-}GHC.Types.Int a
+6609602e2fafdd3b531a2a84bac31238
+  type Byte = GHC.Word.Word8
+ad7a6c6996b87f9168eedb0d518f01dc
+  data Token
+    = T_IntLit GHC.Types.Int
+    | T_StringLit GHC.Base.String
+    | T_Dim
+    | T_As
+    | T_Function
+    | T_Sub
+    | T_Declare
+    | T_ByRef
+    | T_Type
+    | T_Struct
+    | T_Asm
+    | T_Return
+    | T_Int
+    | T_Char
+    | T_Ptr
+    | T_Goto
+    | T_If
+    | T_Else
+    | T_Select
+    | T_Case
+    | T_While
+    | T_For
+    | T_RBrace
+    | T_LBrace
+    | T_RParen
+    | T_LParen
+    | T_LSqBrace
+    | T_RSqBrace
+    | T_EQ
+    | T_NE
+    | T_Assign
+    | T_Or
+    | T_And
+    | T_LE
+    | T_GE
+    | T_Shl
+    | T_Shr
+    | T_LT
+    | T_GT
+    | T_Add
+    | T_Subtract
+    | T_Star
+    | T_AddrOf
+    | T_Div
+    | T_Bor
+    | T_Band
+    | T_Bnot
+    | T_Bxor
+    | T_SemiColon
+    | T_Colon
+    | T_Comma
+    | T_Label GHC.Base.String
+    | T_Identifier GHC.Base.String
+    | T_Typename GHC.Base.String
+2fb910dac67af645fc26a2ed0b4720f0
+  alexGetByte ::
+    Lexer.AlexInput -> GHC.Base.Maybe (Lexer.Byte, Lexer.AlexInput)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(U,1*U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Lexer.AlexInput ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 Lexer.$walexGetByte ww1 ww2 ww3 }) -}
+bd927c813cbc8314f24f071e49b42587
+  alexGetByte1 :: GHC.Types.Int -> GHC.Word.Word8
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: GHC.Types.Int ->
+                 case x of wild { GHC.Types.I# x# ->
+                 GHC.Word.W8# (GHC.Prim.narrow8Word# (GHC.Prim.int2Word# x#)) }) -}
+3a4b569ad4873c60df79e78b0570d3d3
+  alexIndexInt16OffAddr ::
+    Lexer.AlexAddr -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U)><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Lexer.AlexAddr off :: GHC.Prim.Int# ->
+                 case ds of wild { Lexer.AlexA# arr ->
+                 GHC.Prim.indexInt16OffAddr# arr off }) -}
+a7f2ba573199c8b5c448d1e617fe9a6c
+  alexIndexInt32OffAddr ::
+    Lexer.AlexAddr -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U)><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Lexer.AlexAddr off :: GHC.Prim.Int# ->
+                 case ds of wild { Lexer.AlexA# arr ->
+                 GHC.Prim.indexInt32OffAddr# arr off }) -}
+0d6b97c016873e694f7ea1ff96a5eb40
+  alexInputPrevChar :: Lexer.AlexInput -> GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: (GHC.Types.Char, [Lexer.Byte], GHC.Base.String) ->
+                 case ds of wild { (,,) c ds1 ds2 -> c }) -}
+578c87f2b55592296fd981db61cd36e3
+  alexScan ::
+    Lexer.AlexInput
+    -> GHC.Types.Int
+    -> Lexer.AlexReturn ([GHC.Types.Char] -> Lexer.Token)
+  {- Arity: 2, Strictness: <S(LSL),U(U,U,U)><S,1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ input :: Lexer.AlexInput ds :: GHC.Types.Int ->
+                 case ds of wild { GHC.Types.I# sc ->
+                 Lexer.alexScanUser
+                   @ GHC.Prim.Any
+                   (GHC.Err.undefined @ GHC.Prim.Any)
+                   input
+                   (GHC.Types.I# sc) }) -}
+e48d31792e7da1b1039571208d474c5b
+  alexScanTokens :: GHC.Base.String -> [Lexer.Token]
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ str :: GHC.Base.String ->
+                 Lexer.alexScanTokens_go
+                   (Lexer.alexScanTokens1, GHC.Types.[] @ Lexer.Byte, str)) -}
+0cac1da272cdf71da738cd0a769de2eb
+  alexScanTokens1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '\n') -}
+9ca8ef266db3f97fe0cea19ec1cf1287
+  alexScanTokens_go ::
+    (GHC.Types.Char, [Lexer.Byte], GHC.Base.String) -> [Lexer.Token]
+  {- Arity: 1, Strictness: <S(LSL),1*U(U,U,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: (GHC.Types.Char, [Lexer.Byte], GHC.Base.String) ->
+                 case w of ww { (,,) ww1 ww2 ww3 -> Lexer.$wgo ww1 ww2 ww3 }) -}
+f16e696177eacda1116b8ae15d726389
+  alexScanUser ::
+    t
+    -> Lexer.AlexInput
+    -> GHC.Types.Int
+    -> Lexer.AlexReturn ([GHC.Types.Char] -> Lexer.Token)
+  {- Arity: 3, Strictness: <L,A><S(LSL),U(U,U,U)><S,1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t w :: t w1 :: Lexer.AlexInput w2 :: GHC.Types.Int ->
+                 case w1 of ww { (,,) ww1 ww2 ww3 ->
+                 case w2 of ww4 { GHC.Types.I# ww5 ->
+                 Lexer.$walexScanUser @ t ww1 ww2 ww3 ww5 } }) -}
+ea62605bfedbc0bf83118455edbd2474
+  alex_accept ::
+    GHC.Arr.Array
+      GHC.Types.Int
+      (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+  {- Unfolding: (\ @ user ->
+                 GHC.ST.runSTRep
+                   @ (GHC.Arr.Array
+                        GHC.Types.Int
+                        (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user))
+                   (Lexer.alex_accept1 @ user)) -}
+01cb54cd1aa992fbfc890a040a4a9eca
+  alex_accept1 ::
+    GHC.Prim.State# s
+    -> (# GHC.Prim.State# s,
+          GHC.Arr.Array
+            GHC.Types.Int
+            (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user) #)
+  {- Arity: 1,
+     Unfolding: (\ @ user @ s s1# :: GHC.Prim.State# s[OneShot] ->
+                 case GHC.Prim.newArray#
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        @ s
+                        149
+                        (GHC.Arr.arrEleBottom
+                           @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user))
+                        s1# of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        0
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        ipv of s4# { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        1
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4# of s4#1 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        2
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#1 of s4#2 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        3
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#2 of s4#3 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        4
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#3 of s4#4 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        5
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#4 of s4#5 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        6
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#5 of s4#6 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        7
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#6 of s4#7 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        8
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#7 of s4#8 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        9
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#8 of s4#9 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        10
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#9 of s4#10 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        11
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#10 of s4#11 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        12
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#11 of s4#12 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        13
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#12 of s4#13 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        14
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#13 of s4#14 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        15
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#14 of s4#15 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        16
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#15 of s4#16 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        17
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#16 of s4#17 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        18
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#17 of s4#18 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        19
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#18 of s4#19 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        20
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#19 of s4#20 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        21
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#20 of s4#21 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        22
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#21 of s4#22 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        23
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#22 of s4#23 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        24
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#23 of s4#24 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        25
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#24 of s4#25 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        26
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#25 of s4#26 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        27
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#26 of s4#27 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        28
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#27 of s4#28 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        29
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#28 of s4#29 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        30
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#29 of s4#30 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        31
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#30 of s4#31 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        32
+                        (Lexer.AlexAccNone @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#31 of s4#32 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        33
+                        (Lexer.AlexAccSkip @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#32 of s4#33 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        34
+                        (Lexer.AlexAccSkip @ ([GHC.Types.Char] -> Lexer.Token) @ user)
+                        s4#33 of s4#34 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        35
+                        (Lexer.alex_accept56 @ user)
+                        s4#34 of s4#35 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        36
+                        (Lexer.alex_accept55 @ user)
+                        s4#35 of s4#36 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        37
+                        (Lexer.alex_accept54 @ user)
+                        s4#36 of s4#37 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        38
+                        (Lexer.alex_accept53 @ user)
+                        s4#37 of s4#38 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        39
+                        (Lexer.alex_accept52 @ user)
+                        s4#38 of s4#39 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        40
+                        (Lexer.alex_accept51 @ user)
+                        s4#39 of s4#40 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        41
+                        (Lexer.alex_accept50 @ user)
+                        s4#40 of s4#41 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        42
+                        (Lexer.alex_accept49 @ user)
+                        s4#41 of s4#42 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        43
+                        (Lexer.alex_accept48 @ user)
+                        s4#42 of s4#43 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        44
+                        (Lexer.alex_accept47 @ user)
+                        s4#43 of s4#44 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        45
+                        (Lexer.alex_accept46 @ user)
+                        s4#44 of s4#45 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        46
+                        (Lexer.alex_accept45 @ user)
+                        s4#45 of s4#46 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        47
+                        (Lexer.alex_accept44 @ user)
+                        s4#46 of s4#47 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        48
+                        (Lexer.alex_accept43 @ user)
+                        s4#47 of s4#48 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        49
+                        (Lexer.alex_accept42 @ user)
+                        s4#48 of s4#49 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        50
+                        (Lexer.alex_accept41 @ user)
+                        s4#49 of s4#50 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        51
+                        (Lexer.alex_accept40 @ user)
+                        s4#50 of s4#51 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        52
+                        (Lexer.alex_accept39 @ user)
+                        s4#51 of s4#52 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        53
+                        (Lexer.alex_accept38 @ user)
+                        s4#52 of s4#53 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        54
+                        (Lexer.alex_accept37 @ user)
+                        s4#53 of s4#54 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        55
+                        (Lexer.alex_accept36 @ user)
+                        s4#54 of s4#55 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        56
+                        (Lexer.alex_accept35 @ user)
+                        s4#55 of s4#56 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        57
+                        (Lexer.alex_accept34 @ user)
+                        s4#56 of s4#57 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        58
+                        (Lexer.alex_accept33 @ user)
+                        s4#57 of s4#58 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        59
+                        (Lexer.alex_accept32 @ user)
+                        s4#58 of s4#59 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        60
+                        (Lexer.alex_accept31 @ user)
+                        s4#59 of s4#60 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        61
+                        (Lexer.alex_accept30 @ user)
+                        s4#60 of s4#61 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        62
+                        (Lexer.alex_accept29 @ user)
+                        s4#61 of s4#62 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        63
+                        (Lexer.alex_accept28 @ user)
+                        s4#62 of s4#63 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        64
+                        (Lexer.alex_accept27 @ user)
+                        s4#63 of s4#64 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        65
+                        (Lexer.alex_accept26 @ user)
+                        s4#64 of s4#65 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        66
+                        (Lexer.alex_accept25 @ user)
+                        s4#65 of s4#66 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        67
+                        (Lexer.alex_accept24 @ user)
+                        s4#66 of s4#67 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        68
+                        (Lexer.alex_accept23 @ user)
+                        s4#67 of s4#68 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        69
+                        (Lexer.alex_accept22 @ user)
+                        s4#68 of s4#69 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        70
+                        (Lexer.alex_accept21 @ user)
+                        s4#69 of s4#70 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        71
+                        (Lexer.alex_accept20 @ user)
+                        s4#70 of s4#71 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        72
+                        (Lexer.alex_accept19 @ user)
+                        s4#71 of s4#72 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        73
+                        (Lexer.alex_accept18 @ user)
+                        s4#72 of s4#73 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        74
+                        (Lexer.alex_accept17 @ user)
+                        s4#73 of s4#74 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        75
+                        (Lexer.alex_accept16 @ user)
+                        s4#74 of s4#75 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        76
+                        (Lexer.alex_accept15 @ user)
+                        s4#75 of s4#76 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        77
+                        (Lexer.alex_accept14 @ user)
+                        s4#76 of s4#77 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        78
+                        (Lexer.alex_accept13 @ user)
+                        s4#77 of s4#78 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        79
+                        (Lexer.alex_accept12 @ user)
+                        s4#78 of s4#79 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        80
+                        (Lexer.alex_accept11 @ user)
+                        s4#79 of s4#80 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        81
+                        (Lexer.alex_accept10 @ user)
+                        s4#80 of s4#81 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        82
+                        (Lexer.alex_accept9 @ user)
+                        s4#81 of s4#82 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        83
+                        (Lexer.alex_accept8 @ user)
+                        s4#82 of s4#83 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        84
+                        (Lexer.alex_accept7 @ user)
+                        s4#83 of s4#84 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        85
+                        (Lexer.alex_accept6 @ user)
+                        s4#84 of s4#85 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        86
+                        (Lexer.alex_accept5 @ user)
+                        s4#85 of s4#86 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        87
+                        (Lexer.alex_accept4 @ user)
+                        s4#86 of s4#87 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        88
+                        (Lexer.alex_accept4 @ user)
+                        s4#87 of s4#88 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        89
+                        (Lexer.alex_accept4 @ user)
+                        s4#88 of s4#89 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        90
+                        (Lexer.alex_accept4 @ user)
+                        s4#89 of s4#90 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        91
+                        (Lexer.alex_accept3 @ user)
+                        s4#90 of s4#91 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        92
+                        (Lexer.alex_accept3 @ user)
+                        s4#91 of s4#92 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        93
+                        (Lexer.alex_accept3 @ user)
+                        s4#92 of s4#93 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        94
+                        (Lexer.alex_accept3 @ user)
+                        s4#93 of s4#94 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        95
+                        (Lexer.alex_accept3 @ user)
+                        s4#94 of s4#95 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        96
+                        (Lexer.alex_accept3 @ user)
+                        s4#95 of s4#96 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        97
+                        (Lexer.alex_accept3 @ user)
+                        s4#96 of s4#97 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        98
+                        (Lexer.alex_accept3 @ user)
+                        s4#97 of s4#98 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        99
+                        (Lexer.alex_accept3 @ user)
+                        s4#98 of s4#99 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        100
+                        (Lexer.alex_accept3 @ user)
+                        s4#99 of s4#100 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        101
+                        (Lexer.alex_accept3 @ user)
+                        s4#100 of s4#101 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        102
+                        (Lexer.alex_accept3 @ user)
+                        s4#101 of s4#102 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        103
+                        (Lexer.alex_accept3 @ user)
+                        s4#102 of s4#103 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        104
+                        (Lexer.alex_accept3 @ user)
+                        s4#103 of s4#104 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        105
+                        (Lexer.alex_accept3 @ user)
+                        s4#104 of s4#105 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        106
+                        (Lexer.alex_accept3 @ user)
+                        s4#105 of s4#106 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        107
+                        (Lexer.alex_accept3 @ user)
+                        s4#106 of s4#107 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        108
+                        (Lexer.alex_accept3 @ user)
+                        s4#107 of s4#108 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        109
+                        (Lexer.alex_accept3 @ user)
+                        s4#108 of s4#109 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        110
+                        (Lexer.alex_accept3 @ user)
+                        s4#109 of s4#110 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        111
+                        (Lexer.alex_accept3 @ user)
+                        s4#110 of s4#111 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        112
+                        (Lexer.alex_accept3 @ user)
+                        s4#111 of s4#112 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        113
+                        (Lexer.alex_accept3 @ user)
+                        s4#112 of s4#113 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        114
+                        (Lexer.alex_accept3 @ user)
+                        s4#113 of s4#114 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        115
+                        (Lexer.alex_accept3 @ user)
+                        s4#114 of s4#115 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        116
+                        (Lexer.alex_accept3 @ user)
+                        s4#115 of s4#116 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        117
+                        (Lexer.alex_accept3 @ user)
+                        s4#116 of s4#117 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        118
+                        (Lexer.alex_accept3 @ user)
+                        s4#117 of s4#118 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        119
+                        (Lexer.alex_accept3 @ user)
+                        s4#118 of s4#119 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        120
+                        (Lexer.alex_accept3 @ user)
+                        s4#119 of s4#120 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        121
+                        (Lexer.alex_accept3 @ user)
+                        s4#120 of s4#121 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        122
+                        (Lexer.alex_accept3 @ user)
+                        s4#121 of s4#122 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        123
+                        (Lexer.alex_accept3 @ user)
+                        s4#122 of s4#123 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        124
+                        (Lexer.alex_accept3 @ user)
+                        s4#123 of s4#124 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        125
+                        (Lexer.alex_accept3 @ user)
+                        s4#124 of s4#125 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        126
+                        (Lexer.alex_accept3 @ user)
+                        s4#125 of s4#126 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        127
+                        (Lexer.alex_accept3 @ user)
+                        s4#126 of s4#127 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        128
+                        (Lexer.alex_accept3 @ user)
+                        s4#127 of s4#128 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        129
+                        (Lexer.alex_accept3 @ user)
+                        s4#128 of s4#129 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        130
+                        (Lexer.alex_accept3 @ user)
+                        s4#129 of s4#130 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        131
+                        (Lexer.alex_accept3 @ user)
+                        s4#130 of s4#131 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        132
+                        (Lexer.alex_accept3 @ user)
+                        s4#131 of s4#132 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        133
+                        (Lexer.alex_accept3 @ user)
+                        s4#132 of s4#133 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        134
+                        (Lexer.alex_accept3 @ user)
+                        s4#133 of s4#134 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        135
+                        (Lexer.alex_accept3 @ user)
+                        s4#134 of s4#135 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        136
+                        (Lexer.alex_accept3 @ user)
+                        s4#135 of s4#136 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        137
+                        (Lexer.alex_accept3 @ user)
+                        s4#136 of s4#137 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        138
+                        (Lexer.alex_accept3 @ user)
+                        s4#137 of s4#138 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        139
+                        (Lexer.alex_accept3 @ user)
+                        s4#138 of s4#139 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        140
+                        (Lexer.alex_accept3 @ user)
+                        s4#139 of s4#140 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        141
+                        (Lexer.alex_accept3 @ user)
+                        s4#140 of s4#141 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        142
+                        (Lexer.alex_accept3 @ user)
+                        s4#141 of s4#142 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        143
+                        (Lexer.alex_accept3 @ user)
+                        s4#142 of s4#143 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        144
+                        (Lexer.alex_accept3 @ user)
+                        s4#143 of s4#144 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        145
+                        (Lexer.alex_accept3 @ user)
+                        s4#144 of s4#145 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        146
+                        (Lexer.alex_accept3 @ user)
+                        s4#145 of s4#146 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        147
+                        (Lexer.alex_accept3 @ user)
+                        s4#146 of s4#147 { DEFAULT ->
+                 case GHC.Prim.writeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        148
+                        (Lexer.alex_accept3 @ user)
+                        s4#147 of s4#148 { DEFAULT ->
+                 case GHC.Prim.unsafeFreezeArray#
+                        @ s
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                        ipv1
+                        s4#148 of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    GHC.Arr.Array
+                      @ GHC.Types.Int
+                      @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user)
+                      Lexer.$fShowToken2
+                      Lexer.alex_accept2
+                      149
+                      ipv3 #) } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }) -}
+c49859d8af9316c9ee23e4cf3f042718
+  alex_accept10 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_48 @ [GHC.Types.Char])) -}
+333a43fc030ba178d1b9525be9aa2f22
+  alex_accept11 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_47 @ [GHC.Types.Char])) -}
+37df872812c39aa5a425b3105043d6a8
+  alex_accept12 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_46 @ [GHC.Types.Char])) -}
+2c50e037a3363d0670012afb855095d2
+  alex_accept13 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_45 @ [GHC.Types.Char])) -}
+cb1d43a46e061283fd33d599ae264cfa
+  alex_accept14 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_44 @ [GHC.Types.Char])) -}
+870872472361543b07b7fb89d26fb6d0
+  alex_accept15 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_43 @ [GHC.Types.Char])) -}
+d87b35abdd4d3ee5f2cf5f280fecb287
+  alex_accept16 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_42 @ [GHC.Types.Char])) -}
+0d359f7a7a4dc6b9f396b976394bbd87
+  alex_accept17 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_41 @ [GHC.Types.Char])) -}
+a4bbd8b22a0e3206357c88cef78e07fb
+  alex_accept18 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_40 @ [GHC.Types.Char])) -}
+9c6ba4afea9c7cc1e1b145dac459a349
+  alex_accept19 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_39 @ [GHC.Types.Char])) -}
+312b0f2dc6add6156e3c1565a2c30e53
+  alex_accept2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 148) -}
+f66a85cd43ad2acdb788e5a34e5ff0cf
+  alex_accept20 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_38 @ [GHC.Types.Char])) -}
+602d8b5808297c3d7b1fb2c1578e836f
+  alex_accept21 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_37 @ [GHC.Types.Char])) -}
+e0c88723e0c29b4f0b5d9f4c7b94f284
+  alex_accept22 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_36 @ [GHC.Types.Char])) -}
+3bbefefe388f5af7b1bbd292d82df40d
+  alex_accept23 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_35 @ [GHC.Types.Char])) -}
+e0a80caa2d0c3bce6ed1fbfd15a2eb8d
+  alex_accept24 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_34 @ [GHC.Types.Char])) -}
+6eb1347fca7b1e568e189223ff224093
+  alex_accept25 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_33 @ [GHC.Types.Char])) -}
+bd5da8976c2933b3ac3a62e3e67683c9
+  alex_accept26 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_32 @ [GHC.Types.Char])) -}
+4c5d3de0ae62630985faa9c273c8c9b2
+  alex_accept27 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_31 @ [GHC.Types.Char])) -}
+7380098c8c0e7fa86aaf122c385ed65f
+  alex_accept28 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_30 @ [GHC.Types.Char])) -}
+512864521e5403260228575896ed6054
+  alex_accept29 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_29 @ [GHC.Types.Char])) -}
+6599aaf4362f40b95053c41a52664dd8
+  alex_accept3 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.T_Typename) -}
+1e9e6ea87b10b31404c90ec06e618bdb
+  alex_accept30 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_28 @ [GHC.Types.Char])) -}
+d35f857b5a1e812644e29c2ca949fca7
+  alex_accept31 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_27 @ [GHC.Types.Char])) -}
+5b64cbec1a9ed9a4e1db43999b1031f3
+  alex_accept32 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_26 @ [GHC.Types.Char])) -}
+3976c63bbf0f1662d532c89ec3516952
+  alex_accept33 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_25 @ [GHC.Types.Char])) -}
+00d31580390531a1f6aa1777e34f4ad9
+  alex_accept34 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_24 @ [GHC.Types.Char])) -}
+65cf9a6d0d4c86a121f65c523c3356ce
+  alex_accept35 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_23 @ [GHC.Types.Char])) -}
+7675f0bea98606a16bd6a282d3e00dd6
+  alex_accept36 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_22 @ [GHC.Types.Char])) -}
+b4be25c7ba8d409dd1452a1901dceb36
+  alex_accept37 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_21 @ [GHC.Types.Char])) -}
+ffe583a53abce549d93ac7172c768f66
+  alex_accept38 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_20 @ [GHC.Types.Char])) -}
+9e49e3d38a40388f690b339ee7bffe67
+  alex_accept39 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_19 @ [GHC.Types.Char])) -}
+34b9de46307001a377cba4f6bf2527c2
+  alex_accept4 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.T_Identifier) -}
+ddfff12969cc0d141601314af94a8226
+  alex_accept40 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_18 @ [GHC.Types.Char])) -}
+be762adcc0e04e619e24596c00727966
+  alex_accept41 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_17 @ [GHC.Types.Char])) -}
+b88d8023fac5adc085a064e73695518e
+  alex_accept42 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_16 @ [GHC.Types.Char])) -}
+6c29d0cca95b309e289b6072e366d159
+  alex_accept43 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_15 @ [GHC.Types.Char])) -}
+82e3f0daf1eab24b0e13ce261d7a1ca5
+  alex_accept44 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_14 @ [GHC.Types.Char])) -}
+58360a6052f808443c9963815b281697
+  alex_accept45 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_13 @ [GHC.Types.Char])) -}
+8cc5a05a86f7cad2476bb0810091cf55
+  alex_accept46 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_12 @ [GHC.Types.Char])) -}
+b1b0f26cdfbca57ed92cf1072ed12ce7
+  alex_accept47 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_11 @ [GHC.Types.Char])) -}
+ce8cb89c40243a7db97cf6f92f6596af
+  alex_accept48 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_10 @ [GHC.Types.Char])) -}
+f406e9fd0f1782e52cd28e8b8c02dfb0
+  alex_accept49 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_9 @ [GHC.Types.Char])) -}
+f80ba0c7e5a6809aacbab27239edad75
+  alex_accept5 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.alex_action_53) -}
+c6703522ee3baa2ff186c366e018c9a7
+  alex_accept50 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_8 @ [GHC.Types.Char])) -}
+9c8f8415bbc6369defc2de3613bc9716
+  alex_accept51 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_7 @ [GHC.Types.Char])) -}
+9b7e08f3e9eb10eadfe3610c26d8df08
+  alex_accept52 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_6 @ [GHC.Types.Char])) -}
+b9695afe00aeeafd5a77206e94e32e21
+  alex_accept53 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_5 @ [GHC.Types.Char])) -}
+5f576fb5b9e1fccff3c2e6c6ec2ad7ec
+  alex_accept54 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.alex_action_4) -}
+9728d75775f38ca2849ea400cbfdc6b9
+  alex_accept55 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.alex_action_3) -}
+3fdfbdfff76272b1cef5d2f6094861c6
+  alex_accept56 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   Lexer.alex_action_2) -}
+acd6083e38a5ca0d017085e9ecf2d281
+  alex_accept6 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_52 @ [GHC.Types.Char])) -}
+5e017e0d48caa220b6610c176808d615
+  alex_accept7 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_51 @ [GHC.Types.Char])) -}
+763745a83df623e2314c58faeb07a8ee
+  alex_accept8 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_50 @ [GHC.Types.Char])) -}
+594090731c42db52c64f4df3b7de6a91
+  alex_accept9 ::
+    Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) user
+  {- HasNoCafRefs,
+     Unfolding: (\ @ user ->
+                 Lexer.AlexAcc
+                   @ ([GHC.Types.Char] -> Lexer.Token)
+                   @ user
+                   (Lexer.alex_action_49 @ [GHC.Types.Char])) -}
+34b39a4d5c78ed582caebb38beda64cb
+  alex_action_1 :: GHC.Types.Int
+  {- Strictness: b -}
+4a75914ca0de7a01fc6f36cdc402fca5
+  alex_action_10 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_ByRef) -}
+6b82240f90a079e26e6045b9d04f3370
+  alex_action_11 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Type) -}
+ee586cd8bbf02b8c40b3df7456d1d3f3
+  alex_action_12 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Struct) -}
+521e2d01a2cb94b523aa6454377e459a
+  alex_action_13 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Asm) -}
+ed65a477140921944e772288c05ef927
+  alex_action_14 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Return) -}
+9d1a78d9e104858ceb1c1b4541b124ab
+  alex_action_15 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Int) -}
+fac90c102557dee290b2277d26dcb1f5
+  alex_action_16 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Char) -}
+99590bfd79a78caa5844f7542608ee9c
+  alex_action_17 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Ptr) -}
+d3f58566424906b096d15260e3b697cb
+  alex_action_18 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Goto) -}
+18a8b59a3a40c2e28f4576e9a730ef9c
+  alex_action_19 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_If) -}
+e2c7ec5933ee29e90f11032e43b4c456
+  alex_action_2 :: [GHC.Types.Char] -> Lexer.Token
+  {- Arity: 1, Strictness: <L,1*U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ s :: [GHC.Types.Char] ->
+                 Lexer.T_IntLit
+                   (case GHC.List.$w!!
+                           @ GHC.Types.Char
+                           s
+                           1 of wild { GHC.Types.C# c# ->
+                    GHC.Types.I# (GHC.Prim.ord# c#) })) -}
+1f80ab15dff42599113d346d90e83e1f
+  alex_action_20 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Else) -}
+71d4fb708f8f446e46f1b93421591704
+  alex_action_21 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Select) -}
+f302c70525763634c004a03c00dcebd8
+  alex_action_22 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Case) -}
+76327a9ae37e4546b440544f5cbd5abd
+  alex_action_23 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_While) -}
+0825bc95fc09af96e694c38e18f417c8
+  alex_action_24 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_For) -}
+fc3df1f452257d24f3d792f935ceec0b
+  alex_action_25 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_LBrace) -}
+a7cf71664b91d96aba7a3fb7f9a984fd
+  alex_action_26 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_RBrace) -}
+8c59cfebdc0e26373942f5526ed9723f
+  alex_action_27 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_LParen) -}
+deb31d0f31ff869d60590bc10507985c
+  alex_action_28 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_RParen) -}
+9c512e63f12811c9c99a018fa40604df
+  alex_action_29 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_LSqBrace) -}
+d9f50c9001eded689b6441e992895152
+  alex_action_3 :: GHC.Base.String -> Lexer.Token
+  {- Arity: 1, Strictness: <L,U>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: GHC.Base.String ->
+                 Lexer.T_IntLit
+                   (case Text.Read.readEither6
+                           @ GHC.Types.Int
+                           (Text.ParserCombinators.ReadP.run
+                              @ GHC.Types.Int
+                              Lexer.alex_action_58
+                              w) of wild {
+                      [] -> Lexer.alex_action_57
+                      : x ds
+                      -> case ds of wild1 {
+                           [] -> x : ipv ipv1 -> Lexer.alex_action_1 } })) -}
+1976a159e23644e537f7b604c231be50
+  alex_action_30 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_RSqBrace) -}
+8bc626822fbd2979e289306448bd4219
+  alex_action_31 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_EQ) -}
+4287bb6531cf0ffd6a684984d0ff1062
+  alex_action_32 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_NE) -}
+136dfcc6cbf4b8232d3d40cd61bce397
+  alex_action_33 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Assign) -}
+0e64f668e26339067b05109d290ae021
+  alex_action_34 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Or) -}
+50bc777e4c826d687237f0a8e2e0fb91
+  alex_action_35 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_And) -}
+c6917f68498726d2804beeb0af39fc7c
+  alex_action_36 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_LE) -}
+8a58a4adfe742962cebfa946369c565a
+  alex_action_37 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_GE) -}
+68429360be0cafc69b2eeb6744e6352c
+  alex_action_38 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Shl) -}
+b4798afd5e44e977c6226de7b0a50675
+  alex_action_39 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Shr) -}
+1d18cc062dccde0246c7b1065c3d430a
+  alex_action_4 :: [GHC.Types.Char] -> Lexer.Token
+  {- Arity: 1, Strictness: <L,1*U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: [GHC.Types.Char] ->
+                 Lexer.T_StringLit
+                   (case x of wild {
+                      [] -> case GHC.List.scanl2 ret_ty GHC.Base.String of {}
+                      : ds1 xs
+                      -> case xs of wild1 {
+                           [] -> GHC.List.init2 @ GHC.Types.Char
+                           : x1 xs1 -> GHC.List.init1 @ GHC.Types.Char x1 xs1 } })) -}
+4402bff8ef6f8cc1577309d5599dd65b
+  alex_action_40 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_LT) -}
+be06004527e056bb951513893bc77ff5
+  alex_action_41 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_GT) -}
+8a35b831be2acad156fd0fa4f3cf3b2f
+  alex_action_42 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Add) -}
+c3605a618438e06d30b0dcfc553f710c
+  alex_action_43 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Subtract) -}
+8a16022939307aaa213c8fdfb24c63e5
+  alex_action_44 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Star) -}
+9c107c884d56dd8fa161951224d59f2f
+  alex_action_45 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_AddrOf) -}
+4aa874d7a560f0f87bbddb82b886f849
+  alex_action_46 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Div) -}
+1ecbad48758d491ee9b5e7e8158d8bb0
+  alex_action_47 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Bor) -}
+78650e67dd9bb46974a4346e84df4fa2
+  alex_action_48 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Band) -}
+b484e6c29f30f1646aed98f5afbfe423
+  alex_action_49 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Bnot) -}
+129fa6283adf67b582e42e974bebeded
+  alex_action_5 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Dim) -}
+31840a37649f9c89cbd53cd477ccb690
+  alex_action_50 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Bxor) -}
+431beca70dc18cddbc138d101b763c33
+  alex_action_51 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_SemiColon) -}
+b5f707461a7e07fc7ee7fafe8b038978
+  alex_action_52 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Comma) -}
+2d31d1f35f07d0a37f50edaa7190ca71
+  alex_action_53 :: [GHC.Types.Char] -> Lexer.Token
+  {- Arity: 1, Strictness: <L,1*U>m52,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: [GHC.Types.Char] ->
+                 Lexer.T_Label (GHC.List.init @ GHC.Types.Char x)) -}
+00449e718f06f4ebad68e52178998fd3
+  alex_action_54 :: GHC.Base.String -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m53,
+     Unfolding: InlineRule (0, True, True) Lexer.T_Identifier -}
+114acedd2eb2895e9db20d08032bee4a
+  alex_action_55 :: GHC.Base.String -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m54,
+     Unfolding: InlineRule (0, True, True) Lexer.T_Typename -}
+8ca637059f3df722815a464f3f82655f
+  alex_action_57 :: GHC.Types.Int
+  {- Strictness: b -}
+4d100c1ab79be20b5138a0c2a1a10246
+  alex_action_58 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: ((GHC.Read.$fReadInt3
+                    GHC.Read.$fReadInt_$sconvertInt
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <GHC.Types.Int>_R)
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+f6d2be4fdeab2b4e93b481ddb1075c8c
+  alex_action_6 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_As) -}
+7ffbaa15126043b8fe17c69e43f7408e
+  alex_action_7 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Function) -}
+4bad96cdb04da35c17123f1dfded6959
+  alex_action_8 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Sub) -}
+3ee70b2deed2fc81c8257a190e3ab394
+  alex_action_9 :: b -> Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ b ds :: b -> Lexer.T_Declare) -}
+48d8a71af401c79686af779d0fbc989d
+  alex_base :: Lexer.AlexAddr
+  {- HasNoCafRefs, Strictness: m -}
+7306be6cea7e7f93c4275af13f67ec95
+  alex_check :: Lexer.AlexAddr
+  {- HasNoCafRefs, Strictness: m -}
+9873b1e49ea7ed657244ca0d30c9762e
+  alex_deflt :: Lexer.AlexAddr
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Lexer.AlexA#
+                   "\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\r\NUL\r\NUL\\255\\255\SI\NUL\SI\NUL\SYN\NUL\SYN\NUL\SUB\NUL\SUB\NUL\ESC\NUL\ESC\NUL\GS\NUL\\255\\255\GS\NUL\GS\NUL\SOH\NUL\\255\\255\SOH\NUL\SOH\NUL \NUL \NUL\\255\\255\"\NUL\"\NUL\"\NUL\\255\\255\"\NUL\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255\\255"#) -}
+f5a95555dad6ed46ffcf065924c78f11
+  alex_scan_tkn ::
+    t
+    -> t1
+    -> GHC.Prim.Int#
+    -> Lexer.AlexInput
+    -> GHC.Prim.Int#
+    -> Lexer.AlexLastAcc ([GHC.Types.Char] -> Lexer.Token)
+    -> (Lexer.AlexLastAcc ([GHC.Types.Char] -> Lexer.Token),
+        Lexer.AlexInput)
+  {- Arity: 6,
+     Strictness: <L,A><L,A><L,U><S(LSL),1*U(U,U,U)><L,U><L,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ t
+                   @ t1
+                   w :: t
+                   w1 :: t1
+                   w2 :: GHC.Prim.Int#
+                   w3 :: Lexer.AlexInput
+                   w4 :: GHC.Prim.Int#
+                   w5 :: Lexer.AlexLastAcc ([GHC.Types.Char] -> Lexer.Token) ->
+                 case w3 of ww { (,,) ww1 ww2 ww3 ->
+                 case Lexer.$walex_scan_tkn
+                        @ t
+                        @ t1
+                        w2
+                        ww1
+                        ww2
+                        ww3
+                        w4
+                        w5 of ww4 { (#,#) ww5 ww6 ->
+                 (ww5, ww6) } }) -}
+8f16ebbbe182c5bf1183ffccd3410cae
+  alex_tab_size :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8) -}
+cedbccef9f9318891f4cbed98d325e6e
+  alex_table :: Lexer.AlexAddr
+  {- HasNoCafRefs, Strictness: m -}
+8c44e63a49e1b0f1b53396fc7471a2d9
+  quickIndex ::
+    GHC.Arr.Array
+      GHC.Types.Int
+      (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) GHC.Prim.Any)
+    -> GHC.Types.Int
+    -> Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) GHC.Prim.Any
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SSLL),1*U(1*H,1*H,A,U)><S,1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ eta :: GHC.Arr.Array
+                            GHC.Types.Int
+                            (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) GHC.Prim.Any)
+                   eta1 :: GHC.Types.Int ->
+                 case eta of wild { GHC.Arr.Array ds2 ds3 dt arr# ->
+                 case eta1 of wild1 { GHC.Types.I# i# ->
+                 case GHC.Prim.indexArray#
+                        @ (Lexer.AlexAcc ([GHC.Types.Char] -> Lexer.Token) GHC.Prim.Any)
+                        arr#
+                        i# of ds4 { (##) ipv ->
+                 ipv } } }) -}
+fdb292403eac2fa1c8b33771ee2536c1
+  runLexer :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lexer.runLexer1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+049cb3b0de4ef24790c1179f7102712d
+  runLexer1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        GHC.IO.Handle.FD.stdin
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.Show.showList__
+                      @ Lexer.Token
+                      Lexer.$fShowToken1
+                      (Lexer.$wgo Lexer.alexScanTokens1 (GHC.Types.[] @ Lexer.Byte) ipv1)
+                      (GHC.Types.[] @ GHC.Types.Char))
+                   GHC.Types.True
+                   ipv }) -}
+5b5391b09941134e0a65a19ac247ae27
+  utf8Encode :: GHC.Types.Char -> [GHC.Word.Word8]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: GHC.Types.Char ->
+                 case x of wild { GHC.Types.C# c# ->
+                 GHC.Base.build
+                   @ GHC.Word.Word8
+                   (\ @ b1
+                      c :: GHC.Word.Word8 -> b1 -> b1[OneShot]
+                      n :: b1[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Int
+                      @ b1
+                      (GHC.Base.mapFB
+                         @ GHC.Word.Word8
+                         @ b1
+                         @ GHC.Types.Int
+                         c
+                         Lexer.alexGetByte1)
+                      n
+                      (Lexer.utf8Encode1 (GHC.Types.I# (GHC.Prim.ord# c#)))) }) -}
+743d3f3aaf10e3e5b66d585978bdf0ea
+  utf8Encode1 :: GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: GHC.Types.Int ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# ww1 127) of wild {
+                   GHC.Types.False
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 2047) of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# ww1 65535) of wild2 {
+                             GHC.Types.False
+                             -> GHC.Types.:
+                                  @ GHC.Types.Int
+                                  (GHC.Types.I#
+                                     (GHC.Prim.+# 240 (GHC.Prim.uncheckedIShiftRA# ww1 18)))
+                                  (GHC.Types.:
+                                     @ GHC.Types.Int
+                                     (GHC.Types.I#
+                                        (GHC.Prim.+#
+                                           128
+                                           (GHC.Prim.andI#
+                                              (GHC.Prim.uncheckedIShiftRA# ww1 12)
+                                              63)))
+                                     (GHC.Types.:
+                                        @ GHC.Types.Int
+                                        (GHC.Types.I#
+                                           (GHC.Prim.+#
+                                              128
+                                              (GHC.Prim.andI#
+                                                 (GHC.Prim.uncheckedIShiftRA# ww1 6)
+                                                 63)))
+                                        (GHC.Types.:
+                                           @ GHC.Types.Int
+                                           (GHC.Types.I# (GHC.Prim.+# 128 (GHC.Prim.andI# ww1 63)))
+                                           (GHC.Types.[] @ GHC.Types.Int))))
+                             GHC.Types.True
+                             -> GHC.Types.:
+                                  @ GHC.Types.Int
+                                  (GHC.Types.I#
+                                     (GHC.Prim.+# 224 (GHC.Prim.uncheckedIShiftRA# ww1 12)))
+                                  (GHC.Types.:
+                                     @ GHC.Types.Int
+                                     (GHC.Types.I#
+                                        (GHC.Prim.+#
+                                           128
+                                           (GHC.Prim.andI# (GHC.Prim.uncheckedIShiftRA# ww1 6) 63)))
+                                     (GHC.Types.:
+                                        @ GHC.Types.Int
+                                        (GHC.Types.I# (GHC.Prim.+# 128 (GHC.Prim.andI# ww1 63)))
+                                        (GHC.Types.[] @ GHC.Types.Int))) }
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Int
+                             (GHC.Types.I#
+                                (GHC.Prim.+# 192 (GHC.Prim.uncheckedIShiftRA# ww1 6)))
+                             (GHC.Types.:
+                                @ GHC.Types.Int
+                                (GHC.Types.I# (GHC.Prim.+# 128 (GHC.Prim.andI# ww1 63)))
+                                (GHC.Types.[] @ GHC.Types.Int)) }
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Int
+                        (GHC.Types.I# ww1)
+                        (GHC.Types.[] @ GHC.Types.Int) } }) -}
+instance GHC.Classes.Eq [Lexer.Token] = Lexer.$fEqToken
+instance GHC.Base.Functor [Lexer.AlexLastAcc]
+  = Lexer.$fFunctorAlexLastAcc
+instance GHC.Show.Show [Lexer.Token] = Lexer.$fShowToken
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: trustworthy
+require own pkg trusted: False
+
